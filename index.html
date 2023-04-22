@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of objects</title>
+</head>
+<body>
+    <fieldset>
+        let studentRecords = [ 
+          {name: 'John', id: 123, marks : 98 },
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ]
+    </fieldset>
+    <fieldset>
+        <legend>Que1</legend>
+        "We are interested in retrieving only the students' names; all the names should be in caps.
+        ['JOHN', 'BABA', 'YAGA', 'WICK']"
+
+        <hr>
+        <pre>
+            Ans : <br>
+            let result=[]
+          for(let arr of studentRecords){
+             result.push(arr.name.toUpperCase())
+           }
+             console.log(result)
+        </pre>
+    </fieldset>
+    <fieldset>
+        <legend>Que2</legend>
+        "Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+        [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"
+        <hr>
+        <pre>
+            Ans : <br>
+            let result=[]
+            for(let arr of studentRecords){
+             if(arr.marks > 50){
+               result.push(arr)
+             }
+            }
+          console.log(result)
+        </pre>        
+    </fieldset>
+    <fieldset>
+        <legend>Que3</legend>
+        Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.
+        <hr>
+        <pre>
+            Ans : <br>
+            let result=[]
+            for(let arr of studentRecords){
+             if(arr.marks > 50 && arr.id>120){
+               result.push(arr)
+             }
+            }
+          console.log(result)
+        </pre>
+    </fieldset>
+    <fieldset>
+        <legend>Que4</legend>
+        Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.
+         <hr>
+         <pre>
+            Ans : <br>
+            let sum=0;
+            for(let arr of studentRecords){
+             if(arr.marks > 50 && arr.id>120){
+               sum+=arr.marks
+             }
+            }
+          console.log(sum)
+         </pre>
+    </fieldset>
+    <fieldset>
+        <legend>Que5</legend>
+        This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.
+         <hr>
+         <pre>
+            Ans : <br>
+                 
+                let result=[]
+                for(let arr of studentRecords){
+                  if(arr.marks>50){
+                   result.push(arr.name)
+                   }
+                }
+                console.log(result)
+         </pre>
+    </fieldset>
+    <fieldset>
+        <legend>Que6</legend>
+        This time we are required to print the sum of marks of the students with id > 120.
+        <hr>
+        <pre>
+            Ans : <br>
+            let sum=0;
+            for(let arr of studentRecords){
+             if(arr.id>120){
+               sum+=arr.marks
+             }
+            }
+          console.log(sum)
+        </pre>
+    </fieldset>
+    <fieldset>
+        <legend>Que7</legend>
+        This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.
+        <hr>
+        <pre>
+            Ans : <br>
+            let result=[]
+            for(let arr of studentRecords){
+              if(arr.marks<50){
+              arr.marks+=15;
+              }
+              if(arr.marks>50){
+               result.push(arr.marks)
+              }
+            }
+            console.log(result)
+        </pre>
+
+    </fieldset>
+    <fieldset>
+        <legend>Que8</legend>
+        Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 
+        <hr>
+        <pre>
+            Ans : <br>
+            let ar = [];
+            let obj1 = {
+              name: "Shivam",
+              class: "Js",
+              rollno: "1"
+            }
+            let obj2 = {
+              name: "Abhishek",
+              class: "Js",
+              rollno: "2"
+            }
+            let obj3 = {
+              name: "Raj",
+              class: "Js",
+              rollno: "3"
+            }
+            let obj4 = {
+              name: "Avinash",
+              class: "Js",
+              rollno: "4"
+            }
+            let obj5 = {
+              name: "Kiran",
+              class: "Js",
+              rollno: "5"
+            }
+            let obj6 = {
+              name: "Tarun",
+              class: "Js",
+              rollno: "6"
+            }
+            ar.push(obj1, obj2, obj3, obj4, obj5, obj6);
+            console.log(ar);
+        </pre>
+    </fieldset>
+
+    <script src="./script.js"></script>
+</body>
+</html>
